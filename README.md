@@ -35,6 +35,12 @@ cp /var/www/html/lab.html ~/lab-backup.html
 sudo cp ~/lab-backup.html /var/www/html/lab-restored.html
 diff -s /var/www/html/lab.html /var/www/html/lab-restored.html
 ```
+## Verification
 
+![Nginx welcome page opened from Windows](nginx-welcome.png)
+
+![Nginx access log showing HTTP 200 for lab.html](nginx-access-log-200.png)
+
+![Ubuntu terminal showing the original and restored files are identical](restore-terminal.png)
 `diff` reported that the files were identical. I opened the restored
 page at `http://127.0.0.1:8080/lab-restored.html` from Windows.
